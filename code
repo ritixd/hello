@@ -1,0 +1,11 @@
+void setup() {
+  Serial.begin(9600);   // Start UART at 9600 baud
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char c = Serial.read();   // Read one character
+    Serial.print("Received: ");
+    Serial.println(c);
+  }
+}
